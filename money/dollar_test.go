@@ -5,13 +5,14 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	m "app/money"
+	"app/money"
 )
 
 func TestDollerMultiplication(t *testing.T) {
-	five := m.NewDollar(5)
+	product := money.NewDollar(5)
 
-	five.Times(2)
+	product.Times(2)
+	result := product.Times(3)
 
-	assert.Equal(t, five.Amount, 10)
+	assert.Equal(t, result.Amount, 15)
 }
