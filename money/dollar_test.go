@@ -16,3 +16,8 @@ func TestDollerMultiplication(t *testing.T) {
 
 	assert.Equal(t, result.Amount, 15)
 }
+
+func TestDollarEquality(t *testing.T) {
+	assert.True(t, money.NewDollar(5).Equals(money.NewDollar(5)))
+	assert.False(t, money.NewDollar(5).Equals(money.NewDollar(6)))
+}

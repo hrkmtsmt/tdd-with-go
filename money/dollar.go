@@ -11,3 +11,7 @@ func NewDollar(amount int) *Dollar {
 func (d *Dollar) Times(multiplier int) *Dollar {
 	return NewDollar(d.Amount * multiplier)
 }
+
+func (d *Dollar) Equals(dollar *Dollar) bool {
+	return d.Amount == dollar.Amount
+}
