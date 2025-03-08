@@ -9,12 +9,12 @@ import (
 )
 
 func TestDollerMultiplication(t *testing.T) {
-	product := money.NewDollar(5)
+	five := money.NewDollar(5)
 
-	product.Times(2)
-	result := product.Times(3)
+	five.Times(2)
+	result := five.Times(3)
 
-	assert.Equal(t, result.Amount, 15)
+	assert.Equal(t, result, money.NewDollar(15))
 }
 
 func TestDollarEquality(t *testing.T) {
